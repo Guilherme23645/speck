@@ -1,3 +1,58 @@
+:root {
+    --fuchsia: #ff007f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
 body {
-    font-size: 15pt;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    padding: 3px;
+}
+
+body * {
+    background: var(--fuchsia);
+}
+
+header {
+    height: 100px;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    gap: 3px;
+    height: calc(100% - 206px);
+    width: 100%;
+    background: white;
+}
+
+main * {
+    height: 100%;
+    background: var(--fuchsia);
+    transition: width 500ms;
+}
+
+#div1 {
+    width: calc(100% / 3);
+}
+
+#div2 {
+    width: calc(2 * 100% / 3);
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+}
+
+#btn {
+    z-index: 999;
+    position: fixed;
 }
